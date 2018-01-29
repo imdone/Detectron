@@ -127,7 +127,7 @@ def add_ResNet_convX_body(model, block_counts, freeze_at=2):
 def add_ResNet_roi_conv5_head(model, blob_in, dim_in, spatial_scale):
     """Adds an RoI feature transformation (e.g., RoI pooling) followed by a
     res5/conv5 head applied to each RoI."""
-    # TODO(rbg): This contains Fast R-CNN specific config options making it non-
+    # TODO (rbg): This contains Fast R-CNN specific config options making it non- id:5 gh:6
     # reusable; make this more generic with model-specific wrappers
     model.RoIFeatureTransform(
         blob_in,

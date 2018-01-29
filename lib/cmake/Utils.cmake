@@ -160,10 +160,10 @@ endfunction()
 # Helper function to add as-needed flag around a library.
 function(caffe_add_as_needed_flag lib output_var)
   if("${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
-    # TODO: Clang seems to not need this flag. Double check.
+    # TODO: Clang seems to not need this flag. Double check. id:0 gh:1
     set(${output_var} ${lib} PARENT_SCOPE)
   elseif(MSVC)
-    # TODO: check what is the behavior of MSVC.
+    # TODO: check what is the behavior of MSVC. id:2 gh:3
     # In MSVC, we will add whole archive in default.
     set(${output_var} ${lib} PARENT_SCOPE)
   else()
