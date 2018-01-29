@@ -89,7 +89,7 @@ def add_rpn_blobs(blobs, im_scales, roidb):
             (entry['gt_classes'] > 0) & (entry['is_crowd'] == 0)
         )[0]
         gt_rois = entry['boxes'][gt_inds, :] * scale
-        # TODO(rbg): gt_boxes is poorly named;
+        # TODO (rbg): gt_boxes is poorly named; id:7 gh:8
         # should be something like 'gt_rois_info'
         gt_boxes = blob_utils.zeros((len(gt_inds), 6))
         gt_boxes[:, 0] = im_i  # batch inds

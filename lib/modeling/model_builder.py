@@ -91,12 +91,12 @@ def generalized_rcnn(model):
 
 
 def rfcn(model):
-    # TODO(rbg): fold into build_generic_detection_model
+    # TODO (rbg): fold into build_generic_detection_model id:3 gh:4
     return build_generic_rfcn_model(model, get_func(cfg.MODEL.CONV_BODY))
 
 
 def retinanet(model):
-    # TODO(rbg): fold into build_generic_detection_model
+    # TODO (rbg): fold into build_generic_detection_model id:8 gh:9
     return build_generic_retinanet_model(model, get_func(cfg.MODEL.CONV_BODY))
 
 
@@ -315,7 +315,7 @@ def _add_roi_keypoint_head(
 
 
 def build_generic_rfcn_model(model, add_conv_body_func, dim_reduce=None):
-    # TODO(rbg): fold this function into build_generic_detection_model
+    # TODO (rbg): fold this function into build_generic_detection_model id:4 gh:5
     def _single_gpu_build_func(model):
         """Builds the model on a single GPU. Can be called in a loop over GPUs
         with name and device scoping to create a data parallel model."""
@@ -334,7 +334,7 @@ def build_generic_rfcn_model(model, add_conv_body_func, dim_reduce=None):
 def build_generic_retinanet_model(
     model, add_conv_body_func, freeze_conv_body=False
 ):
-    # TODO(rbg): fold this function into build_generic_detection_model
+    # TODO (rbg): fold this function into build_generic_detection_model id:6 gh:7
     def _single_gpu_build_func(model):
         """Builds the model on a single GPU. Can be called in a loop over GPUs
         with name and device scoping to create a data parallel model."""

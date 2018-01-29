@@ -508,7 +508,7 @@ __C.RETINANET.SCALES_PER_OCTAVE = 3
 __C.RETINANET.ANCHOR_SCALE = 4
 
 # Convolutions to use in the cls and bbox tower
-# NOTE: this doesn't include the last conv for logits
+# NOTE: this doesn't include the last conv for logits id:1 gh:2
 __C.RETINANET.NUM_CONVS = 4
 
 # Weight for bbox_regression loss
